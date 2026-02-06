@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>💕 Shivam & Sandhya Forever 💕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #ff4d6d;
+      --primary-light: #ff8fa3;
+      --primary-dark: #c41e3a;
+      --accent: #ffd93d;
+      --bg-dark: #0d0208;
+      --bg-purple: #1a0a1f;
+      --bg-deep: #120612;
+      --card-bg: rgba(26, 10, 31, 0.95);
+      --text-main: #ffffff;
+      --text-soft: #ffccd5;
+      --text-muted: #d4a5b5;
+      --shadow-glow: 0 0 40px rgba(255, 77, 109, 0.5);
+      --shadow-intense: 0 0 60px rgba(196, 30, 58, 0.6);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, sans-serif;
+      color: var(--text-main);
+      background: linear-gradient(135deg, #0d0208 0%, #1a0a1f 30%, #120612 60%, #0d0208 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Floating Hearts Background */
+    .hearts-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: floatHeart 18s infinite;
+      opacity: 0.5;
+      filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.8));
+    }
+
+    @keyframes floatHeart {
+      0%, 100% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.5; }
+      90% { opacity: 0.5; }
+      100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* Smoke/Mist Effect */
+    .mist {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(255, 77, 109, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(196, 30, 58, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(255, 143, 163, 0.05) 0%, transparent 60%);
+      z-index: 0;
+      pointer-events: none;
+      animation: mistMove 20s infinite alternate;
+    }
+
+    @keyframes mistMove {
+      0% { opacity: 0.6; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 60px;
+    }
+
+    @media (min-width: 768px) {
+      .page { padding: 40px 24px 80px; }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Great Vibes", cursive;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== OVERLAY ===== */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(13, 2, 8, 0.98), rgba(26, 10, 31, 0.98), rgba(18, 6, 18, 0.98));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .overlay-card {
+      background: linear-gradient(135deg, rgba(26, 10, 31, 0.95), rgba(18, 6, 18, 0.98));
+      box-shadow: var(--shadow-intense), 0 25px 80px rgba(0,0,0,0.7);
+      border-radius: 32px;
+      padding: 45px 35px 40px;
+      max-width: 520px;
+      width: 95%;
+      border: 2px solid rgba(255, 77, 109, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .rose-decoration {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      animation: pulse 2s infinite;
+      filter: drop-shadow(0 0 15px rgba(255, 77, 109, 0.8));
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    .couple-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2rem;
+      background: linear-gradient(45deg, #ff4d6d, #ffd93d, #ff6b9d, #ff4d6d);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s ease-in-out infinite;
+      margin-bottom: 15px;
+      text-shadow: 0 0 30px rgba(255, 77, 109, 0.5);
+    }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .overlay-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: var(--primary);
+      margin: 25px 0 20px;
+      text-shadow: 0 0 30px rgba(255, 77, 109, 0.7);
+      animation: glowPulse 2s infinite;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        text-shadow: 0 0 20px rgba(255, 77, 109, 0.5);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 40px rgba(255, 77, 109, 0.9), 0 0 60px rgba(196, 30, 58, 0.5);
+        transform: scale(1.02);
+      }
+    }
+
+    .hindi-line {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      margin: 18px 0;
+      font-style: italic;
+      line-height: 2;
+      text-shadow: 0 0 10px rgba(255, 77, 109, 0.3);
+    }
+
+    .overlay-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 16px 45px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff4d6d, #c41e3a);
+      color: #fff;
+      box-shadow: 0 10px 35px rgba(255, 77, 109, 0.6), 0 0 20px rgba(196, 30, 58, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.08);
+      box-shadow: 0 18px 50px rgba(255, 77, 109, 0.7), 0 0 40px rgba(196, 30, 58, 0.5);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+      color: #888;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      border: 1px solid #444;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #333, #222);
+      color: #aaa;
+    }
+
+    /* ===== THINK AGAIN MODAL ===== */
+    .think-again-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(15px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 30;
+    }
+
+    .modal-card {
+      background: linear-gradient(135deg, #1a0a1f, #0d0208, #120612);
+      border-radius: 28px;
+      padding: 45px 35px;
+      max-width: 450px;
+      width: 92%;
+      text-align: center;
+      box-shadow: var(--shadow-intense), 0 0 80px rgba(255, 77, 109, 0.3);
+      border: 2px solid var(--primary);
+      animation: modalAppear 0.5s ease;
+    }
+
+    @keyframes modalAppear {
+      0% {
+        transform: scale(0.5) rotateY(90deg);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1) rotateY(0deg);
+      }
+      100% {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+      }
+    }
+
+    .modal-card .modal-emoji {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .modal-card h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+    }
+
+    .modal-card p {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+      line-height: 1.9;
+    }
+
+    .modal-card .modal-shayari {
+      font-style: italic;
+      color: var(--primary-light);
+      margin: 20px 0;
+      font-size: 1.05rem;
+      line-height: 2;
+      text-shadow: 0 0 10px rgba(255, 77, 109, 0.3);
+    }
+
+    .modal-card .btn-primary {
+      margin-top: 25px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, rgba(255, 77, 109, 0.12), rgba(196, 30, 58, 0.08), rgba(26, 10, 31, 0.9));
+      border-radius: 32px;
+      box-shadow: var(--shadow-intense);
+      padding: 45px 30px;
+      border: 2px solid rgba(255, 77, 109, 0.4);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 77, 109, 0.1) 0%, transparent 50%);
+      animation: heroGlow 10s infinite;
+    }
+
+    @keyframes heroGlow {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(25%, 25%); }
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 768px) {
+      .hero { padding: 55px 50px; }
+    }
+
+    .hero-heading {
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-shadow: 0 0 30px rgba(255, 77, 109, 0.6);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      margin-bottom: 15px;
+      line-height: 2;
+    }
+
+    .hero-shayari {
+      font-size: 1.1rem;
+      color: var(--primary-light);
+      font-style: italic;
+      line-height: 2.2;
+      margin: 25px 0;
+      padding: 20px;
+      background: rgba(255, 77, 109, 0.08);
+      border-radius: 16px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .names {
+      margin-top: 25px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #ff6b9d, #ffd93d, #ff4d6d);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      margin-bottom: 45px;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      text-align: center;
+      text-shadow: 0 0 25px rgba(255, 77, 109, 0.5);
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      margin-bottom: 25px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* ===== MEMORIES ===== */
+    .memories {
+      background: linear-gradient(135deg, rgba(255, 77, 109, 0.08), rgba(26, 10, 31, 0.9));
+      border-radius: var(--radius-lg);
+      padding: 35px 25px;
+      box-shadow: var(--shadow-intense);
+      border: 2px solid rgba(255, 77, 109, 0.35);
+    }
+
+    @media (min-width: 768px) {
+      .memories { padding: 40px 35px; }
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .memory-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .memory-card {
+      background: linear-gradient(135deg, rgba(255, 77, 109, 0.15), rgba(196, 30, 58, 0.1));
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 2px solid rgba(255, 77, 109, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      transition: all 0.5s ease;
+    }
+
+    .memory-card:hover {
+      transform: translateY(-10px) rotate(1deg);
+      box-shadow: var(--shadow-intense);
+      border-color: var(--primary);
+    }
+
+    .memory-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.1);
+      transition: all 0.5s ease;
+    }
+
+    .memory-card:hover img {
+      filter: saturate(1.3) brightness(1.1);
+      transform: scale(1.05);
+    }
+
+    .memory-caption {
+      padding: 18px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent, rgba(13, 2, 8, 0.8));
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    /* ===== VALENTINE WEEK ===== */
+    .valentine-week {
+      background: linear-gradient(135deg, rgba(26, 10, 31, 0.95), rgba(18, 6, 18, 0.98));
+      border-radius: var(--radius-lg);
+      padding: 35px 25px;
+      border: 2px solid rgba(255, 77, 109, 0.35);
+      box-shadow: var(--shadow-intense);
+    }
+
+    @media (min-width: 768px) {
+      .valentine-week { padding: 40px 35px; }
+    }
+
+    .week-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 700px) {
+      .week-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .day-card {
+      background: linear-gradient(135deg, rgba(255, 77, 109, 0.1), rgba(26, 10, 31, 0.9));
+      border-radius: var(--radius-md);
+      padding: 22px;
+      border: 2px solid rgba(255, 77, 109, 0.25);
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 77, 109, 0.15), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .day-card:hover::before { opacity: 1; }
+
+    .day-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .day-card.locked {
+      opacity: 0.5;
+      filter: grayscale(30%);
+    }
+
+    .day-card.locked::after {
+      content: '🔒';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      opacity: 0.7;
+    }
+
+    .day-card.locked:hover {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .day-card.unlocked {
+      border-color: var(--primary);
+      animation: cardGlow 3s infinite alternate;
+    }
+
+    @keyframes cardGlow {
+      from { box-shadow: 0 0 20px rgba(255, 77, 109, 0.3); }
+      to { box-shadow: 0 0 40px rgba(255, 77, 109, 0.6), 0 0 60px rgba(196, 30, 58, 0.3); }
+    }
+
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .day-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.6));
+    }
+
+    .day-name {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: var(--primary-light);
+    }
+
+    .day-date {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .day-tagline {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      font-style: italic;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.7;
+    }
+
+    .day-status {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1;
+    }
+
+    .gift-content {
+      margin-top: 15px;
+      border-radius: 14px;
+      background: rgba(255, 77, 109, 0.12);
+      border: 1px dashed rgba(255, 77, 109, 0.5);
+      padding: 15px;
+      display: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gift-content img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      max-height: 220px;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .gift-text {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    /* ===== LOVE LETTER ===== */
+    .love-letter {
+      background: linear-gradient(135deg, rgba(255, 77, 109, 0.12), rgba(196, 30, 58, 0.08), rgba(26, 10, 31, 0.95));
+      border-radius: 30px;
+      padding: 50px 30px;
+      margin: 50px 0;
+      border: 2px solid rgba(255, 77, 109, 0.4);
+      text-align: center;
+      box-shadow: var(--shadow-intense);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .love-letter::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+
+    .love-letter h2 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-shadow: 0 0 25px rgba(255, 77, 109, 0.5);
+    }
+
+    .love-letter p {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      line-height: 2.1;
+      max-width: 750px;
+      margin: 0 auto 18px;
+    }
+
+    .love-letter .letter-shayari {
+      font-style: italic;
+      color: var(--primary-light);
+      font-size: 1.15rem;
+      margin: 30px auto;
+      padding: 25px;
+      background: rgba(255, 77, 109, 0.1);
+      border-radius: 16px;
+      border-left: 4px solid var(--primary);
+      max-width: 600px;
+      line-height: 2.2;
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #ff6b9d, #ffd93d, #ff4d6d);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-top: 35px;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    /* ===== DARK FANTASY QUOTES ===== */
+    .quotes-section {
+      background: linear-gradient(135deg, rgba(26, 10, 31, 0.95), rgba(13, 2, 8, 0.98));
+      border-radius: var(--radius-lg);
+      padding: 40px 25px;
+      border: 2px solid rgba(255, 77, 109, 0.3);
+      text-align: center;
+    }
+
+    .quote-item {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      margin: 25px 0;
+      font-style: italic;
+      line-height: 2;
+      padding: 15px 20px;
+      background: rgba(255, 77, 109, 0.06);
+      border-radius: 12px;
+      border-left: 3px solid var(--primary);
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.3s ease;
+    }
+
+    .quote-item:hover {
+      background: rgba(255, 77, 109, 0.12);
+      transform: translateX(5px);
+      box-shadow: 0 5px 20px rgba(255, 77, 109, 0.2);
+    }
+
+    /* ===== MIDNIGHT SECTION ===== */
+    .midnight-section {
+      background: linear-gradient(135deg, rgba(13, 2, 8, 0.98), rgba(26, 10, 31, 0.95), rgba(18, 6, 18, 0.98));
+      border-radius: var(--radius-lg);
+      padding: 45px 30px;
+      margin: 45px 0;
+      border: 2px solid rgba(196, 30, 58, 0.4);
+      text-align: center;
+      box-shadow: 0 0 60px rgba(196, 30, 58, 0.3);
+    }
+
+    .midnight-section h3 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
+
+    .midnight-text {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      line-height: 2.2;
+      font-style: italic;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .footer-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: var(--primary-light);
+      margin-bottom: 12px;
+      text-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+    }
+
+    .footer-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== CONFETTI ===== */
+    .confetti {
+      position: fixed;
+      width: 12px;
+      height: 12px;
+      animation: confetti-fall 4s ease-out forwards;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(1080deg);
+        opacity: 0;
+      }
+    }
+
+    /* ===== SPARKLE ===== */
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, var(--primary) 40%, var(--primary-dark) 70%, transparent 100%);
+      animation: sparkle 1.2s ease-out forwards;
+      z-index: 100;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(0); opacity: 1; }
+      50% { opacity: 1; }
+      100% { transform: scale(4); opacity: 0; }
+    }
+
+    /* Hide main content initially */
+    #mainContent {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Mist Effect -->
+  <div class="mist"></div>
+
+  <!-- Floating Hearts Background -->
+  <div class="hearts-bg" id="heartsContainer"></div>
+
+  <!-- Full-screen entry overlay -->
+  <div class="overlay" id="valentineOverlay">
+    <div class="overlay-card">
+      <div class="rose-decoration">🌹🖤🌹</div>
+
+      <h2 class="couple-names">Sandhya & Shivam</h2>
+
+      <p class="hindi-line">
+        "रात की तन्हाई में तेरा ख्याल आता है,<br>
+        तेरे बिना ये दिल बेचैन हो जाता है..."
+      </p>
+
+      <h1 class="overlay-title">Will You Be My Valentine? 💕</h1>
+
+      <p class="hindi-line">
+        "तेरी सांसों में घुल जाना है मुझे,<br>
+        तेरा होके रह जाना है मुझे..."
+      </p>
+
+      <div class="overlay-buttons">
+        <button class="btn btn-primary" id="yesButton">💕 Yes, I'm Yours 💕</button>
+        <button class="btn btn-secondary" id="noButton">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Think again modal -->
+  <div class="think-again-modal" id="thinkAgainModal">
+    <div class="modal-card">
+      <div class="modal-emoji">🥺💔</div>
+      <h2>सोच लो, मेरी जान...</h2>
+      <p>
+        Shivam के बिना Valentine कैसे होगा?<br>
+        दिल से एक बार फिर सोच लो...
+      </p>
+      <p class="modal-shayari">
+        "तुम ना होगी तो ये रातें सूनी होंगी,<br>
+        तुम्हारे बिना मेरी धड़कनें भी बेजान होंगी...<br>
+        एक मौका दो, तुम्हें अपना बना लूं,<br>
+        इस दिल में सिर्फ तुम्हें बसा लूं..."
+      </p>
+      <button class="btn btn-primary" id="finalYesButton">💕 Yes, I'll Be Your Valentine 💕</button>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="page" id="mainContent">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2 class="hero-heading">💕 Great Choice, My Love! 💕</h2>
+      <p class="hero-subtitle">
+        संध्या, तुमने हां कह दी... अब ये दिल पूरी तरह तुम्हारा है।<br>
+        हर रात, हर सुबह, हर पल सिर्फ तुम्हारे नाम।
+      </p>
+
+      <div class="hero-shayari">
+        "तेरी आंखों की गहराई में डूब जाना है मुझे,<br>
+        तेरे होंठों की खामोशी को समझ जाना है मुझे,<br>
+        ये दुनिया तो बस एक बहाना है संध्या,<br>
+        बस तेरे करीब आ जाना है मुझे..."
+      </div>
+
+      <p class="names">Shivam ♥ Sandhya</p>
+    </section>
+
+    <!-- Memories Section -->
+    <section class="section memories">
+      <h3 class="section-title">🖤 हमारी यादें 🖤</h3>
+      <p class="section-sub">
+        वो लम्हे जो सिर्फ हमारे हैं... जिनमें बस तुम और मैं।
+      </p>
+
+      <div class="memory-grid">
+        <!-- Memory 1 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=18DShaHQllb3dXEJ6TPch7xGWea6pVKob" alt="Hamari yaad 1" />
+          <p class="memory-caption">
+            Thoda sa drama, thoda sa attitude, aur beinteha pyaar –  
+            hamari ekdum perfect combination wali photo.
+          </p>
+        </div>
+
+        <!-- Memory 2 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=18DrGREclURXJSRRsTE15UPrZGpB0nm6s" alt="Hamari yaad 2" />
+          <p class="memory-caption">
+            Thoda sa cute, thoda sa classy, thoda sa dangerous –  
+            bilkul hamare pyaar ki tarah.
+          </p>
+        </div>
+
+        <!-- Memory 3 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1FEz4FXvS2bEavRNA0R4cWTeYduOwlm7_" alt="Hamari yaad 3" />
+          <p class="memory-caption">
+            Yeh candid moment nahi tha, yeh meri jaan‑bujhkar chori ki gayi yaad hai,  
+            taaki main ise baar‑baar dekh kar khush ho sakun.
+          </p>
+        </div>
+
+        <!-- Memory 4 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1Fk1uxeDixmmWM4htfpkgV4NeMbFip2z2" alt="Hamari yaad 4" />
+          <p class="memory-caption">
+            Yeh woh pal hai jahan maine socha:  
+            “Haan, isi ke saath saari lambi raatein aur lazy subhe chahiye mujhe.”
+          </p>
+        </div>
+
+        <!-- Memory 5 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1GI8BNSqDM7PzGOBv5NvclSKDbkHvgK5W" alt="Hamari yaad 5" />
+          <p class="memory-caption">
+            Yeh meri favourite type ki yaad hai – jahan tum full mood mein ho  
+            aur main tum par full fida.
+          </p>
+        </div>
+
+        <!-- Memory 6 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1MTCvL96FETKidvR2xILj7wpoOf62JdGm" alt="Hamari yaad 6" />
+          <p class="memory-caption">
+            Tumhari smile + mera obsessed dil = world’s most lethal combination.  
+            Is combo ka koi ilaaj nahi chahiye mujhe.
+          </p>
+        </div>
+
+        <!-- Memory 7 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1OPGJIDYcn2vEUg0RX8gMP0C9kRJhRnev" alt="Hamari yaad 7" />
+          <p class="memory-caption">
+            Jab tum meri taraf aise dekhti ho,  
+            lagta hai main khud ko tum par officially surrender kar du.
+          </p>
+        </div>
+
+        <!-- Memory 8 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1P0kBqwUffzkJ67hFl5LcKQrKNjp6zqHj" alt="Hamari yaad 8" />
+          <p class="memory-caption">
+            Yahan hum dono itne normal lag rahe hain,  
+            par mujhe pata hai mere dimaag mein kitni wild thoughts chal rahi thi.
+          </p>
+        </div>
+
+        <!-- Memory 9 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1P4cqvhjmB2GLG7Bfb8z73cYsS85-2QCh" alt="Hamari yaad 9" />
+          <p class="memory-caption">
+            Last nahi, bas filhaal ki latest yaad hai yeh –  
+            aage ki saari crazy, romantic, dark, pyaari kahaniyaan abhi bhi likhni baaki hain, Sandhya.
+          </p>
+        </div>
+
+        <!-- Memory 10 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1Qa3Tom7-as4-jhu-dNRMp0BRjFAXmdWt" alt="Hamari yaad 10" />
+          <p class="memory-caption">
+            Is photo mein tumhare baal, tumhari aankhen, aur mera control –  
+            teeno hi almost out of control hain.
+          </p>
+        </div>
+
+        <!-- Memory 11 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1WnPr90r76nl4ryRvzlfNOJF_BVnVWwiF" alt="Hamari yaad 11" />
+          <p class="memory-caption">
+            Jab tum mere kandhe par sir rakh ke baithti ho,  
+            lagta hai poori duniya se zyada safe jagah yahi hai.
+          </p>
+        </div>
+
+        <!-- Memory 12 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1aBrunLskoFQUgPQHup11oabKlePnioVB" alt="Hamari yaad 12" />
+          <p class="memory-caption">
+            Is selfie mein sirf chehre dikh rahe hain,  
+            par background mein hamari saari unsaid feelings aur thodi si dark fantasy chhupi hai.
+          </p>
+        </div>
+
+        <!-- Memory 13 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1e0PmlfjI0e3Mc1h6p4IoleyIdhzzEDXl" alt="Hamari yaad 13" />
+          <p class="memory-caption">
+            Jab tum mere itne paas hoti ho, duniya automatic blur ho jaati hai,  
+            bas tumhari saansein aur mera tezz dhadakta dil reh jaata hai.
+          </p>
+        </div>
+
+        <!-- Memory 14 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1fZmMJ5JSdY-8HiWYO3jOHgHBlNqZw7KT" alt="Hamari yaad 14" />
+          <p class="memory-caption">
+            Yeh wali pose dekh kar lagta hai ki hum dono ek dusre ke liye hi design hue hain –  
+            perfect fit, thodi si madness ke saath.
+          </p>
+        </div>
+
+        <!-- Memory 15 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1g5jiLzaqIfrWJguQNzc7S7uDWt5f29ot" alt="Hamari yaad 15" />
+          <p class="memory-caption">
+            Yahin se hamari kahaani shuru hui – ek normal si photo,  
+            lekin mere liye poori zindagi ka turning point.
+          </p>
+        </div>
+
+        <!-- Memory 16 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1iMMdELE_OsI5VkY3d7x00U1kAwP6hXWu" alt="Hamari yaad 16" />
+          <p class="memory-caption">
+            Iss raat ki vibe hi kuch aur thi, aankhon aankhon mein kitni baatein ho gayi thi  
+            jo lafzon tak kabhi nahi aayi.
+          </p>
+        </div>
+
+        <!-- Memory 17 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1nQS5MTTZw_OlfQJL8rnnVhcXXzPeOzIP" alt="Hamari yaad 17" />
+          <p class="memory-caption">
+            Yahan tum itni khoobsurat lag rahi ho ki maine khud se promise kar liya:  
+            is ladki ko kabhi lose nahi karna.
+          </p>
+        </div>
+
+        <!-- Memory 18 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1sKqtfoHZ-NaBMcQruLwC_IkzWk_NtRsZ" alt="Hamari yaad 18" />
+          <p class="memory-caption">
+            Is photo mein jitne close dikhe hain,  
+            usse kahin zyada close hamari souls ho chuki hain.
+          </p>
+        </div>
+
+        <!-- Memory 19 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1wPtTlunvb_pwvyfB09KDHjFbJBhTeHbQ" alt="Hamari yaad 19" />
+          <p class="memory-caption">
+            Hum dono ke chehron par jo comfort hai,  
+            woh sirf sachche pyaar aur thodi si shararat se aata hai.
+          </p>
+        </div>
+
+        <!-- Memory 20 -->
+        <div class="memory-card">
+          <img src="https://drive.google.com/uc?export=view&id=1xYMiolCq2Lk7gwIyWRbx0LIx3zdBW0xI" alt="Hamari yaad 20" />
+          <p class="memory-caption">
+            Chahe crowd kitna bhi ho, mera focus sirf tum par lock rehta hai –  
+            baaki sab sirf background hai.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Midnight Section - Dark Fantasy -->
+    <section class="midnight-section">
+      <h3>🌙 आधी रात का इक़रार 🌙</h3>
+      <p class="midnight-text">
+        "जब रात गहरी होती है और सब सो जाते हैं,<br>
+        तब मैं सिर्फ तुम्हारे बारे में सोचता हूं संध्या...<br><br>
+        तुम्हारी खुशबू मेरी सांसों में घुल जाती है,<br>
+        तुम्हारी यादों में ये रातें कट जाती हैं...<br><br>
+        तुम वो आग हो जो मुझे जलाती भी है,<br>
+        और वो ठंडक भी जो मुझे सुकून देती है..."
+      </p>
+    </section>
+
+    <!-- Valentine Week Section -->
+    <section class="section valentine-week">
+      <h3 class="section-title">🎁 Valentine Week Surprises 🎁</h3>
+      <p class="section-sub">
+        हर दिन एक नया surprise... सिर्फ तुम्हारे लिए।
+      </p>
+
+      <div class="week-grid">
+        <!-- Rose Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="7">
+          <div class="day-icon">🌹</div>
+          <div class="day-header">
+            <span class="day-name">Rose Day</span>
+            <span class="day-date">7 Feb</span>
+          </div>
+          <p class="day-tagline">"ये गुलाब नहीं, मेरे दिल की आग है..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1518882605630-8eb339bf7bfd?w=400" alt="Rose Day" />
+            <p class="gift-text">
+              संध्या, ये लाल गुलाब उस आग की निशानी है जो तुमने मेरे दिल में जलाई है।
+              तुम्हारे बिना ये आग बुझ जाएगी... इसलिए हमेशा मेरे साथ रहना। 🌹❤️‍🔥
+            </p>
+          </div>
+        </div>
+
+        <!-- Propose Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="8">
+          <div class="day-icon">💍</div>
+          <div class="day-header">
+            <span class="day-name">Propose Day</span>
+            <span class="day-date">8 Feb</span>
+          </div>
+          <p class="day-tagline">"आज कह देता हूं जो दिल में है..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400" alt="Propose Day" />
+            <p class="gift-text">
+              "तुम्हें पाने की चाहत इतनी है संध्या,<br>
+              कि ज़िंदगी भर propose करता रहूंगा...<br>
+              तुम मेरी हो, बस मेरी... ये वादा है।" 💍🔥
+            </p>
+          </div>
+        </div>
+
+        <!-- Chocolate Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="9">
+          <div class="day-icon">🍫</div>
+          <div class="day-header">
+            <span class="day-name">Chocolate Day</span>
+            <span class="day-date">9 Feb</span>
+          </div>
+          <p class="day-tagline">"तुम्हारे होंठों से मीठी कोई chocolate नहीं..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400" alt="Chocolate Day" />
+            <p class="gift-text">
+              "ये chocolate तो बस बहाना है,<br>
+              असली मिठास तो तुम्हारी बातों में है...<br>
+              तुम्हारी हर अदा नशा है संध्या।" 🍫💋
+            </p>
+          </div>
+        </div>
+
+        <!-- Teddy Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="10">
+          <div class="day-icon">🧸</div>
+          <div class="day-header">
+            <span class="day-name">Teddy Day</span>
+            <span class="day-date">10 Feb</span>
+          </div>
+          <p class="day-tagline">"जब मैं ना होऊं, इसे गले लगा लेना..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Teddy Day" />
+            <p class="gift-text">
+              "ये teddy मेरी जगह तुम्हें गले लगाएगा,<br>
+              जब रात को मेरी याद आए...<br>
+              पर याद रखना, असली गले तो सिर्फ मेरे होंगे।" 🧸🤗
+            </p>
+          </div>
+        </div>
+
+        <!-- Promise Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="11">
+          <div class="day-icon">🤝</div>
+          <div class="day-header">
+            <span class="day-name">Promise Day</span>
+            <span class="day-date">11 Feb</span>
+          </div>
+          <p class="day-tagline">"ये वादा है, तोड़ूंगा नहीं कभी..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1529333241880-1148ac5c6fce?w=400" alt="Promise Day" />
+            <p class="gift-text">
+              "वादा करता हूं संध्या...<br>
+              तुम्हारी हर रात को सुहानी बनाऊंगा,<br>
+              तुम्हारे हर डर को दूर भगाऊंगा,<br>
+              बस तुम मेरा हाथ कभी मत छोड़ना।" 🤝❤️‍🔥
+            </p>
+          </div>
+        </div>
+
+        <!-- Hug Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="12">
+          <div class="day-icon">🤗</div>
+          <div class="day-header">
+            <span class="day-name">Hug Day</span>
+            <span class="day-date">12 Feb</span>
+          </div>
+          <p class="day-tagline">"तुम्हारी बाहों में मेरी दुनिया है..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1516589091382-12ec54aa71f7?w=400" alt="Hug Day" />
+            <p class="gift-text">
+              "जब तुम गले लगाती हो संध्या,<br>
+              तो लगता है जन्नत मिल गई...<br>
+              तुम्हारी बाहों में खो जाना है,<br>
+              और कभी वापस नहीं आना है।" 🤗🔥
+            </p>
+          </div>
+        </div>
+
+        <!-- Kiss Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="13">
+          <div class="day-icon">💋</div>
+          <div class="day-header">
+            <span class="day-name">Kiss Day</span>
+            <span class="day-date">13 Feb</span>
+          </div>
+          <p class="day-tagline">"तुम्हारे होंठों पर मेरा हक़ है..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400" alt="Kiss Day" />
+            <p class="gift-text">
+              "तुम्हारे होंठों की प्यास है मुझे,<br>
+              तुम्हारी सांसों का नशा है मुझे...<br>
+              आज की रात सिर्फ तुम्हारे नाम है संध्या।" 💋❤️‍🔥
+            </p>
+          </div>
+        </div>
+
+        <!-- Valentine's Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="14">
+          <div class="day-icon">💕</div>
+          <div class="day-header">
+            <span class="day-name">Valentine's Day</span>
+            <span class="day-date">14 Feb</span>
+          </div>
+          <p class="day-tagline">"आज की रात सिर्फ हमारी है..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <img src="https://images.unsplash.com/photo-1516589091382-12ec54aa71f7?w=400" alt="Valentine's Day" />
+            <p class="gift-text">
+              "आज का दिन, आज की रात...<br>
+              सब कुछ तुम्हारे नाम है संध्या।<br>
+              तुम मेरी Valentine थी, हो, और रहोगी...<br>
+              ज़िंदगी भर, जन्मों जन्मों तक।<br><br>
+              I LOVE YOU SANDHYA... हमेशा के लिए! 💕❤️‍🔥🔥
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="love-letter">
+      <h2>💌 तुम्हारे नाम एक खत 💌</h2>
+
+      <p>मेरी जान, संध्या...</p>
+
+      <p>
+        तुम्हें पाकर लगता है जैसे ज़िंदगी की सबसे बड़ी जीत मिल गई।
+        तुम सिर्फ मेरी girlfriend नहीं हो, तुम मेरी धड़कन हो, मेरी सांसें हो।
+      </p>
+
+      <div class="letter-shayari">
+        "तेरे बिना ये रातें अधूरी हैं,<br>
+        तेरे बिना ये सांसें मजबूरी हैं...<br>
+        तू पास हो तो जन्नत है ये दुनिया,<br>
+        तू दूर हो तो बस तन्हाई पूरी है..."
+      </div>
+
+      <p>
+        हर रात तुम्हारे बारे में सोचता हूं... तुम्हारी आंखें, तुम्हारी मुस्कान,
+        तुम्हारी वो हंसी जो मेरे दिल को पागल कर देती है।
+      </p>
+
+      <p>
+        तुम मेरी हो, सिर्फ मेरी। और मैं तुम्हारा हूं, पूरी तरह।
+        ये वादा है... ज़िंदगी भर का।
+      </p>
+
+      <p class="signature">
+        तुम्हारा और सिर्फ तुम्हारा,<br>
+        ~ Shivam 💕🔥
+      </p>
+    </section>
+
+    <!-- Dark Fantasy Quotes Section -->
+    <section class="section quotes-section">
+      <h3 class="section-title">🖤 दिल की गहराइयों से 🖤</h3>
+
+      <p class="quote-item">
+        तेरी यादों में खोया रहता हूं रातों को,<br>
+        तेरे ख्यालों में जलता हूं, फिर भी चैन पाता हूं...
+      </p>
+
+      <p class="quote-item">
+        तू वो नशा है जो उतरता नहीं,<br>
+        तू वो आग है जो बुझती नहीं...
+      </p>
+
+      <p class="quote-item">
+        तेरी खुशबू में डूब जाता हूं,<br>
+        तेरी बाहों में सो जाता हूं,<br>
+        तू है तो ज़िंदगी है संध्या,<br>
+        वरना मैं कहीं खो जाता हूं...
+      </p>
+
+      <p class="quote-item">
+        रात की तन्हाई में तेरा नाम लेता हूं,<br>
+        तेरे बिना इस दिल को क्या कहें,<br>
+        बस तेरी यादों में जीता हूं...
+      </p>
+
+      <p class="quote-item">
+        तू मेरी रातों का चांद है,<br>
+        तू मेरी सांसों की धड़कन है,<br>
+        बस तू है तो सब है,<br>
+        वरना ये दुनिया वीरान है...
+      </p>
+
+      <p class="quote-item">
+        तेरे बिना अंधेरी रातें हैं,<br>
+        तेरे साथ हर रात सुहानी है,<br>
+        तू मेरी ज़िंदगी की कहानी है संध्या,<br>
+        बस यही सच्चाई है, यही निशानी है...
+      </p>
+    </section>
+
+    <!-- Closing Note -->
+    <section class="section">
+      <p class="section-sub" style="max-width: 650px; margin: 0 auto; padding: 25px; background: rgba(255, 77, 109, 0.08); border-radius: 20px; border-left: 4px solid var(--primary);">
+        संध्या, जब भी अकेलापन लगे, जब भी मेरी याद आए...<br>
+        इस page पर आ जाना। यहां हर लफ्ज़ में, हर तस्वीर में<br>
+        सिर्फ एक ही बात छुपी है —<br><br>
+        <strong style="color: var(--primary); font-size: 1.3rem;">
+          "शिवम तुमसे बेइंतहा मोहब्बत करता है..." ❤️‍🔥
+        </strong>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p class="footer-text">Made with 🖤 by Shivam for his Sandhya 💕</p>
+      <p class="footer-sub">Private • Forever & Always • तुम मेरी हो ♾️</p>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var overlay = document.getElementById("valentineOverlay");
+      var thinkAgainModal = document.getElementById("thinkAgainModal");
+      var yesButton = document.getElementById("yesButton");
+      var noButton = document.getElementById("noButton");
+      var finalYesButton = document.getElementById("finalYesButton");
+      var mainContent = document.getElementById("mainContent");
+
+      // Create floating hearts
+      createHearts();
+
+      // Yes button - show main content with confetti
+      yesButton.addEventListener("click", function () {
+        createConfetti();
+        setTimeout(function() {
+          overlay.style.display = "none";
+          mainContent.style.display = "block";
+          window.scrollTo(0, 0);
+        }, 600);
+      });
+
+      // No button - shows think again modal
+      noButton.addEventListener("click", function () {
+        thinkAgainModal.style.display = "flex";
+      });
+
+      // Final Yes button in modal
+      finalYesButton.addEventListener("click", function () {
+        thinkAgainModal.style.display = "none";
+        createConfetti();
+        setTimeout(function() {
+          overlay.style.display = "none";
+          mainContent.style.display = "block";
+          window.scrollTo(0, 0);
+        }, 600);
+      });
+
+      // Close modal if click outside
+      thinkAgainModal.addEventListener("click", function (e) {
+        if (e.target === thinkAgainModal) {
+          thinkAgainModal.style.display = "none";
+        }
+      });
+
+      // Valentine week logic
+      setupValentineWeek();
+
+      // Sparkle effect on click
+      document.addEventListener('click', function(e) {
+        createSparkle(e.clientX, e.clientY);
+      });
+    });
+
+    // Create floating hearts
+    function createHearts() {
+      var container = document.getElementById('heartsContainer');
+      var hearts = ['❤️', '💕', '💗', '🖤', '❤️‍🔥', '🌹', '✨', '💋'];
+
+      for (var i = 0; i < 30; i++) {
+        var heart = document.createElement('span');
+        heart.className = 'heart';
+        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+        heart.style.left = Math.random() * 100 + '%';
+        heart.style.animationDelay = Math.random() * 18 + 's';
+        heart.style.fontSize = (Math.random() * 22 + 14) + 'px';
+        container.appendChild(heart);
+      }
+    }
+
+    // Create confetti
+    function createConfetti() {
+      var colors = ['#ff4d6d', '#ff8fa3', '#c41e3a', '#ffd93d', '#fff', '#ff6b9d', '#8b0000'];
+
+      for (var i = 0; i < 100; i++) {
+        var confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 2.5 + 's';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        document.body.appendChild(confetti);
+
+        (function(c) {
+          setTimeout(function() {
+            if (c.parentNode) {
+              c.parentNode.removeChild(c);
+            }
+          }, 5000);
+        })(confetti);
+      }
+    }
+
+    // Create sparkle
+    function createSparkle(x, y) {
+      var sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = (x - 6) + 'px';
+      sparkle.style.top = (y - 6) + 'px';
+      document.body.appendChild(sparkle);
+
+      setTimeout(function() {
+        if (sparkle.parentNode) {
+          sparkle.parentNode.removeChild(sparkle);
+        }
+      }, 1200);
+    }
+
+    // Valentine Week Setup
+    function setupValentineWeek() {
+      var today = new Date();
+      var month = today.getMonth() + 1;
+      var day = today.getDate();
+
+      var cards = document.querySelectorAll(".day-card");
+      cards.forEach(function (card) {
+        var openMonth = parseInt(card.getAttribute("data-open-month"), 10);
+        var openDay = parseInt(card.getAttribute("data-open-day"), 10);
+        var statusEl = card.querySelector(".day-status");
+        var dateLabel = card.querySelector(".day-date").innerText;
+        var giftContent = card.querySelector(".gift-content");
+
+        var isUnlocked = month > openMonth || (month === openMonth && day >= openDay);
+
+        if (isUnlocked) {
+          card.classList.remove("locked");
+          card.classList.add("unlocked");
+          statusEl.textContent = "🎁 तुम्हारा surprise तैयार है... Tap करो, मेरी जान!";
+          statusEl.style.color = "#ff8fa3";
+        } else {
+          card.classList.add("locked");
+          statusEl.textContent = "🔒 ये surprise " + dateLabel + " को खुलेगा...";
+        }
+
+        card.addEventListener("click", function (e) {
+          if (card.classList.contains("unlocked")) {
+            if (giftContent.style.display === "block") {
+              giftContent.style.display = "none";
+            } else {
+              giftContent.style.display = "block";
+              createSparkle(e.clientX, e.clientY);
+            }
+          } else {
+            alert("थोड़ा इंतज़ार करो मेरी जान... 💕\n\nये surprise " + dateLabel + " को खुलेगा।\nबस कुछ दिन और... 🔥");
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
