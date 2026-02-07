@@ -620,6 +620,18 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
+    /* >>> NEW: make Rose Day video responsive & fully visible on mobile/desktop <<< */
+    .gift-content video.gift-video {
+      width: 100%;
+      height: auto;
+      max-height: 60vh;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      background: #000;
+    }
+    /* <<< END NEW >>> */
+
     .gift-text {
       font-size: 0.95rem;
       color: var(--text-soft);
@@ -810,74 +822,80 @@
     #mainContent {
       display: none;
     }
+
     /* ===== MOBILE RESPONSIVE TWEAKS ===== */
-@media (max-width: 600px) {
-  .overlay {
-    padding: 10px;
-    align-items: flex-start;      /* top-align so content starts from top */
-    justify-content: center;
-    overflow-y: auto;             /* allow scrolling if content is tall */
-  }
+    @media (max-width: 600px) {
+      .overlay {
+        padding: 10px;
+        align-items: flex-start;      /* top-align so content starts from top */
+        justify-content: center;
+        overflow-y: auto;             /* allow scrolling if content is tall */
+      }
 
-  .overlay-card {
-    max-width: 100%;
-    padding: 24px 18px 22px;
-    border-radius: 20px;
-    max-height: calc(100vh - 30px);  /* never taller than screen */
-    overflow-y: auto;                /* internal scroll if needed */
-  }
+      .overlay-card {
+        max-width: 100%;
+        padding: 24px 18px 22px;
+        border-radius: 20px;
+        max-height: calc(100vh - 30px);  /* never taller than screen */
+        overflow-y: auto;                /* internal scroll if needed */
+      }
 
-  .rose-decoration {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-  }
+      .rose-decoration {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
 
-  .couple-names {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
-  }
+      .couple-names {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+      }
 
-  .overlay-title {
-    font-size: 2.1rem;
-    margin: 15px 0 10px;
-  }
+      .overlay-title {
+        font-size: 2.1rem;
+        margin: 15px 0 10px;
+      }
 
-  .hindi-line {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin: 10px 0;
-  }
+      .hindi-line {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 10px 0;
+      }
 
-  .overlay-buttons {
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 18px;
-  }
+      .overlay-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 18px;
+      }
 
-  .btn {
-    font-size: 0.95rem;
-    padding: 12px 20px;
-    width: 100%;
-    max-width: 260px;
-  }
+      .btn {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+        width: 100%;
+        max-width: 260px;
+      }
 
-  .hero-heading {
-    font-size: 2.4rem;
-  }
+      .hero-heading {
+        font-size: 2.4rem;
+      }
 
-  .hero-subtitle,
-  .hero-shayari {
-    font-size: 0.95rem;
-  }
+      .hero-subtitle,
+      .hero-shayari {
+        font-size: 0.95rem;
+      }
 
-  .section-title {
-    font-size: 2.1rem;
-  }
-
+      .section-title {
+        font-size: 2.1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Background music (Sawaal – in images folder) -->
+<audio id="bgMusic" loop>
+  <source src="images/sawaal.webm" type="audio/webm" />
+</audio>
+
   <!-- Mist Effect -->
   <div class="mist"></div>
 
@@ -956,171 +974,153 @@
       <p class="section-sub">
         वो लम्हे जो सिर्फ हमारे हैं... जिनमें बस तुम और मैं।
       </p>
-<div class="memory-grid">
-  <!-- Memory 1 -->
-  <div class="memory-card">
-    <img src="images/memory1.JPG" alt="Hamari yaad 1" />
-    <p class="memory-caption">
-      Thoda sa drama, thoda sa attitude, aur beinteha pyaar –  
-      hamari ekdum perfect combination wali photo.
-    </p>
-  </div>
-
-  <!-- Memory 2 -->
-  <div class="memory-card">
-    <img src="images/memory2.JPG" alt="Hamari yaad 2" />
-    <p class="memory-caption">
-      Thoda sa cute, thoda sa classy, thoda sa dangerous –  
-      bilkul hamare pyaar ki tarah.
-    </p>
-  </div>
-
-  <!-- Memory 3 -->
-  <div class="memory-card">
-    <img src="images/memory3.JPG" alt="Hamari yaad 3" />
-    <p class="memory-caption">
-      Yeh candid moment nahi tha, yeh meri jaan‑bujhkar chori ki gayi yaad hai,  
-      taaki main ise baar‑baar dekh kar khush ho sakun.
-    </p>
-  </div>
-
-  <!-- Memory 4 -->
-  <div class="memory-card">
-    <img src="images/memory4.JPG" alt="Hamari yaad 4" />
-    <p class="memory-caption">
-      Yeh woh pal hai jahan maine socha:  
-      “Haan, isi ke saath saari lambi raatein aur lazy subhe chahiye mujhe.”
-    </p>
-  </div>
-
-  <!-- Memory 5 -->
-  <div class="memory-card">
-    <img src="images/memory5.JPG" alt="Hamari yaad 5" />
-    <p class="memory-caption">
-      Yeh meri favourite type ki yaad hai – jahan tum full mood mein ho  
-      aur main tum par full fida.
-    </p>
-  </div>
-
-  <!-- Memory 6 -->
-  <div class="memory-card">
-    <img src="images/memory6.HEIC" alt="Hamari yaad 6" />
-    <p class="memory-caption">
-      Tumhari smile + mera obsessed dil = world’s most lethal combination.  
-      Is combo ka koi ilaaj nahi chahiye mujhe.
-    </p>
-  </div>
-
-  <!-- Memory 7 -->
-  <div class="memory-card">
-    <img src="images/memory7.JPG" alt="Hamari yaad 7" />
-    <p class="memory-caption">
-      Jab tum meri taraf aise dekhti ho,  
-      lagta hai main khud ko tum par officially surrender kar du.
-    </p>
-  </div>
-
-  <!-- Memory 8 -->
-  <div class="memory-card">
-    <img src="images/memory8.JPG" alt="Hamari yaad 8" />
-    <p class="memory-caption">
-      Yahan hum dono itne normal lag rahe hain,  
-      par mujhe pata hai mere dimaag mein kitni wild thoughts chal rahi thi.
-    </p>
-  </div>
-
-
-  <!-- Memory 9 -->
-  <div class="memory-card">
-    <img src="images/memory9.JPG" alt="Hamari yaad 9" />
-    <p class="memory-caption">
-      Is photo mein tumhare baal, tumhari aankhen, aur mera control –  
-      teeno hi almost out of control hain.
-    </p>
-  </div>
-
-  <!-- Memory 10 -->
-  <div class="memory-card">
-    <img src="images/memory10.JPG" alt="Hamari yaad 10" />
-    <p class="memory-caption">
-      Jab tum mere kandhe par sir rakh ke baithti ho,  
-      lagta hai poori duniya se zyada safe jagah yahi hai.
-    </p>
-  </div>
-
-  <!-- Memory 11 -->
-  <div class="memory-card">
-    <img src="images/memory11.JPG" alt="Hamari yaad 11" />
-    <p class="memory-caption">
-      Is selfie mein sirf chehre dikh rahe hain,  
-      par background mein hamari saari unsaid feelings aur thodi si dark fantasy chhupi hai.
-    </p>
-  </div>
-
-  <!-- Memory 12 -->
-  <div class="memory-card">
-    <img src="images/memory12.JPG" alt="Hamari yaad 12" />
-    <p class="memory-caption">
-      Jab tum mere itne paas hoti ho, duniya automatic blur ho jaati hai,  
-      bas tumhari saansein aur mera tezz dhadakta dil reh jaata hai.
-    </p>
-  </div>
-
-  <!-- Memory 13 -->
-  <div class="memory-card">
-    <img src="images/memory13.JPG" alt="Hamari yaad 13" />
-    <p class="memory-caption">
-      Yeh wali pose dekh kar lagta hai ki hum dono ek dusre ke liye hi design hue hain –  
-      perfect fit, thodi si madness ke saath.
-    </p>
-  </div>
-
-  <!-- Memory 14 -->
-  <div class="memory-card">
-    <img src="images/memory14.JPG" alt="Hamari yaad 14" />
-    <p class="memory-caption">
-      Yahin se hamari kahaani shuru hui – ek normal si photo,  
-      lekin mere liye poori zindagi ka turning point.
-    </p>
-  </div>
-
-  <!-- Memory 15 -->
-  <div class="memory-card">
-    <img src="images/memory15.JPG" alt="Hamari yaad 15" />
-    <p class="memory-caption">
-      Iss raat ki vibe hi kuch aur thi, aankhon aankhon mein kitni baatein ho gayi thi  
-      jo lafzon tak kabhi nahi aayi.
-    </p>
-  </div>
-
-  <!-- Memory 16 -->
-  <div class="memory-card">
-    <img src="images/memory16.JPG" alt="Hamari yaad 16" />
-    <p class="memory-caption">
-      Yahan tum itni khoobsurat lag rahi ho ki maine khud se promise kar liya:  
-      is ladki ko kabhi lose nahi karna.
-    </p>
-  </div>
-
-  <!-- Memory 17 -->
-  <div class="memory-card">
-    <img src="images/memory17.JPG" alt="Hamari yaad 17" />
-    <p class="memory-caption">
-      Is photo mein jitne close dikhe hain,  
-      usse kahin zyada close hamari souls ho chuki hain.
-    </p>
-  </div>
-
-  <!-- Memory 18 -->
-  <div class="memory-card">
-    <img src="images/memory18.HEIC" alt="Hamari yaad 18" />
-    <p class="memory-caption">
-      Hum dono ke chehron par jo comfort hai,  
-      woh sirf sachche pyaar aur thodi si shararat se aata hai.
-    </p>
-  </div>
-
-     </div>
+      <div class="memory-grid">
+        <!-- Memory cards (unchanged) -->
+        <!-- 1 -->
+        <div class="memory-card">
+          <img src="images/memory1.JPG" alt="Hamari yaad 1" />
+          <p class="memory-caption">
+            Thoda sa drama, thoda sa attitude, aur beinteha pyaar –  
+            hamari ekdum perfect combination wali photo.
+          </p>
+        </div>
+        <!-- 2 -->
+        <div class="memory-card">
+          <img src="images/memory2.JPG" alt="Hamari yaad 2" />
+          <p class="memory-caption">
+            Thoda sa cute, thoda sa classy, thoda sa dangerous –  
+            bilkul hamare pyaar ki tarah.
+          </p>
+        </div>
+        <!-- 3 -->
+        <div class="memory-card">
+          <img src="images/memory3.JPG" alt="Hamari yaad 3" />
+          <p class="memory-caption">
+            Yeh candid moment nahi tha, yeh meri jaan‑bujhkar chori ki gayi yaad hai,  
+            taaki main ise baar‑baar dekh kar khush ho sakun.
+          </p>
+        </div>
+        <!-- 4 -->
+        <div class="memory-card">
+          <img src="images/memory4.JPG" alt="Hamari yaad 4" />
+          <p class="memory-caption">
+            Yeh woh pal hai jahan maine socha:  
+            “Haan, isi ke saath saari lambi raatein aur lazy subhe chahiye mujhe.”
+          </p>
+        </div>
+        <!-- 5 -->
+        <div class="memory-card">
+          <img src="images/memory5.JPG" alt="Hamari yaad 5" />
+          <p class="memory-caption">
+            Yeh meri favourite type ki yaad hai – jahan tum full mood mein ho  
+            aur main tum par full fida.
+          </p>
+        </div>
+        <!-- 6 -->
+        <div class="memory-card">
+          <img src="images/memory6.HEIC" alt="Hamari yaad 6" />
+          <p class="memory-caption">
+            Tumhari smile + mera obsessed dil = world’s most lethal combination.  
+            Is combo ka koi ilaaj nahi chahiye mujhe.
+          </p>
+        </div>
+        <!-- 7 -->
+        <div class="memory-card">
+          <img src="images/memory7.JPG" alt="Hamari yaad 7" />
+          <p class="memory-caption">
+            Jab tum meri taraf aise dekhti ho,  
+            lagta hai main khud ko tum par officially surrender kar du.
+          </p>
+        </div>
+        <!-- 8 -->
+        <div class="memory-card">
+          <img src="images/memory8.JPG" alt="Hamari yaad 8" />
+          <p class="memory-caption">
+            Yahan hum dono itne normal lag rahe hain,  
+            par mujhe pata hai mere dimaag mein kitni wild thoughts chal rahi thi.
+          </p>
+        </div>
+        <!-- 9 -->
+        <div class="memory-card">
+          <img src="images/memory9.JPG" alt="Hamari yaad 9" />
+          <p class="memory-caption">
+            Is photo mein tumhare baal, tumhari aankhen, aur mera control –  
+            teeno hi almost out of control hain.
+          </p>
+        </div>
+        <!-- 10 -->
+        <div class="memory-card">
+          <img src="images/memory10.JPG" alt="Hamari yaad 10" />
+          <p class="memory-caption">
+            Jab tum mere kandhe par sir rakh ke baithti ho,  
+            lagta hai poori duniya से ज्यादा safe jagah yahi hai.
+          </p>
+        </div>
+        <!-- 11 -->
+        <div class="memory-card">
+          <img src="images/memory11.JPG" alt="Hamari yaad 11" />
+          <p class="memory-caption">
+            Is selfie mein sirf chehre dikh rahe hain,  
+            par background mein hamari saari unsaid feelings aur thodi si dark fantasy chhupi hai.
+          </p>
+        </div>
+        <!-- 12 -->
+        <div class="memory-card">
+          <img src="images/memory12.JPG" alt="Hamari yaad 12" />
+          <p class="memory-caption">
+            Jab tum mere itne paas hoti ho, duniya automatic blur ho jaati hai,  
+            bas tumhari saansein aur mera tezz dhadakta dil reh jaata hai.
+          </p>
+        </div>
+        <!-- 13 -->
+        <div class="memory-card">
+          <img src="images/memory13.JPG" alt="Hamari yaad 13" />
+          <p class="memory-caption">
+            Yeh wali pose dekh kar lagta hai ki hum dono ek dusre ke liye hi design hue hain –  
+            perfect fit, thodi si madness ke saath.
+          </p>
+        </div>
+        <!-- 14 -->
+        <div class="memory-card">
+          <img src="images/memory14.JPG" alt="Hamari yaad 14" />
+          <p class="memory-caption">
+            Yahin se hamari kahaani shuru hui – ek normal si photo,  
+            lekin mere liye poori zindagi ka turning point.
+          </p>
+        </div>
+        <!-- 15 -->
+        <div class="memory-card">
+          <img src="images/memory15.JPG" alt="Hamari yaad 15" />
+          <p class="memory-caption">
+            Iss raat ki vibe hi kuch aur thi, aankhon aankhon mein kitni baatein हो gayi thi  
+            jo lafzon tak kabhi nahi aayi.
+          </p>
+        </div>
+        <!-- 16 -->
+        <div class="memory-card">
+          <img src="images/memory16.JPG" alt="Hamari yaad 16" />
+          <p class="memory-caption">
+            Yahan tum itni khoobsurat lag rahi ho ki maine khud se promise kar liya:  
+            is ladki ko kabhi lose nahi karna.
+          </p>
+        </div>
+        <!-- 17 -->
+        <div class="memory-card">
+          <img src="images/memory17.JPG" alt="Hamari yaad 17" />
+          <p class="memory-caption">
+            Is photo mein jitne close dikhe hain,  
+            usse kahin zyada close hamari souls ho chuki hain.
+          </p>
+        </div>
+        <!-- 18 -->
+        <div class="memory-card">
+          <img src="images/memory18.HEIC" alt="Hamari yaad 18" />
+          <p class="memory-caption">
+            Hum dono ke chehron par jo comfort hai,  
+            woh sirf sachche pyaar aur thodi si shararat se aata hai.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Midnight Section - Dark Fantasy -->
@@ -1144,25 +1144,25 @@
       </p>
 
       <div class="week-grid">
-       <!-- Rose Day -->
-<div class="day-card locked" data-open-month="2" data-open-day="7">
-  <div class="day-icon">🌹</div>
-  <div class="day-header">
-    <span class="day-name">Rose Day</span>
-    <span class="day-date">7 Feb</span>
-  </div>
-  <p class="day-tagline">"ये गुलाब नहीं, मेरे दिल की आग है..."</p>
-  <p class="day-status"></p>
-  <div class="gift-content">
-    <video class="gift-video"
-           src="images/Funny.mp4"
-           controls autoplay loop muted playsinline></video>
-    <p class="gift-text">
-      संध्या, ये लाल गुलाब उस आग की निशानी है जो तुमने मेरे दिल में जलाई है।
-      तुम्हारे बिना ये आग बुझ जाएगी... इसलिए हमेशा मेरे साथ रहना। 🌹❤️‍🔥
-    </p>
-  </div>
-</div>
+        <!-- Rose Day -->
+        <div class="day-card locked" data-open-month="2" data-open-day="7">
+          <div class="day-icon">🌹</div>
+          <div class="day-header">
+            <span class="day-name">Rose Day</span>
+            <span class="day-date">7 Feb</span>
+          </div>
+          <p class="day-tagline">"ये गुलाब नहीं, मेरे दिल की आग है..."</p>
+          <p class="day-status"></p>
+          <div class="gift-content">
+            <video class="gift-video"
+                   src="images/Funny.mp4"
+                   controls autoplay loop muted playsinline></video>
+            <p class="gift-text">
+              संध्या, ये लाल गुलाब उस आग की निशानी है जो तुमने मेरे दिल में जलाई है।
+              तुम्हारे बिना ये आग बुझ जाएगी... इसलिए हमेशा मेरे साथ रहना। 🌹❤️‍🔥
+            </p>
+          </div>
+        </div>
 
         <!-- Propose Day -->
         <div class="day-card locked" data-open-month="2" data-open-day="8">
@@ -1342,7 +1342,7 @@
       <h3 class="section-title">🖤 दिल की गहराइयों से 🖤</h3>
 
       <p class="quote-item">
-        तेरी यादों में खोया रहता हूं रातों को,<br>
+        तेरी یادों में खोया रहता हूं रातों को,<br>
         तेरे ख्यालों में जलता हूं, फिर भी चैन पाता हूं...
       </p>
 
@@ -1406,12 +1406,24 @@
       var noButton = document.getElementById("noButton");
       var finalYesButton = document.getElementById("finalYesButton");
       var mainContent = document.getElementById("mainContent");
+      var bgMusic = document.getElementById("bgMusic");
+
+      // Background music: set volume 50% and try to autoplay
+      if (bgMusic) {
+        bgMusic.volume = 0.5;
+        bgMusic.play().catch(function () {
+          // Autoplay might be blocked; will start on user interaction
+        });
+      }
 
       // Create floating hearts
       createHearts();
 
-      // Yes button - show main content with confetti
+      // Yes button - show main content with confetti and start music
       yesButton.addEventListener("click", function () {
+        if (bgMusic) {
+          bgMusic.play().catch(function () {});
+        }
         createConfetti();
         setTimeout(function() {
           overlay.style.display = "none";
@@ -1420,13 +1432,19 @@
         }, 600);
       });
 
-      // No button - shows think again modal
+      // No button - shows think again modal and start music
       noButton.addEventListener("click", function () {
+        if (bgMusic) {
+          bgMusic.play().catch(function () {});
+        }
         thinkAgainModal.style.display = "flex";
       });
 
       // Final Yes button in modal
       finalYesButton.addEventListener("click", function () {
+        if (bgMusic) {
+          bgMusic.play().catch(function () {});
+        }
         thinkAgainModal.style.display = "none";
         createConfetti();
         setTimeout(function() {
@@ -1548,9 +1566,4 @@
     }
   </script>
 </body>
-
 </html>
-
-
-
-
